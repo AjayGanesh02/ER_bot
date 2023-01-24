@@ -18,7 +18,7 @@ client.on(Events.MessageCreate, msg => {
     if (msg.author.bot) return;
     console.log(`running on message: ${msg.content}`)
     console.log(`sent by ${msg.author}`)
-    const regex = /\b[a-z|A-Z]{2,}er|ER\b/
+    const regex = /\b[a-z|A-Z]{2,}[er|ER]\b/
     if (regex.test(msg.content)) {
         const word = msg.content.match(regex)[0];
         msg.reply(`${word}? I hardly know her!`);
