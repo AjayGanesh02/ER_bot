@@ -22,6 +22,10 @@ client.on(Events.MessageCreate, msg => {
     if (regex.test(msg.content)) {
         const word = msg.content.match(regex)[0];
         msg.reply(`${word}? I hardly know her!`);
+    } else if (msg.content.includes("bad bot")) {
+        msg.reply(`er bot loves being degraded`)
+    } else if (msg.content.includes("bot")) {
+        msg.reply(`that's me im bot`)
     }
 })
 
